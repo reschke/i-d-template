@@ -98,6 +98,6 @@ setup-ghpages:
 	@echo '      - gh-pages' >>circle.yml
 	git add index.html circle.yml
 	git commit -m "Automatic setup of gh-pages."
+	git clean -qfdX
 	git push --set-upstream $(GIT_REMOTE) gh-pages
 	git checkout -qf "$(GIT_ORIG)"
-	git clean -qfdX
